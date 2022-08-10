@@ -1,4 +1,4 @@
-name: Your Fork
+name: POC Build
 
 on:
   pull_request_target:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Automatically close pull requests
-      if: ${{ github.repository.name }} == 'hashicorp/tfc-guide-example'
+      if: ${{ github.repository.name }} == 'hashicorp/vtoc-tf-poc'
       uses: superbrothers/close-pull-request@v3
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
